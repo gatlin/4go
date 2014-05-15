@@ -3,7 +3,7 @@
   "description": "A simple OSM map application for mobile devices",
   "launch_path": "/index.html",
   "icons": {
-    "128": "/img/icon-128.png"
+    "128": "/images/icon-128.png"
   },
   "developer": {
     "name": "Gatlin Johnson",
