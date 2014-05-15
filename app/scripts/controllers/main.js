@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('car4goingApp')
-  .controller('MainCtrl', function ($scope, geolocation) {
+  .controller('MainCtrl', function ($scope, geolocation, $http) {
       angular.extend($scope, {
           defaults: {
               scrollWheelZoom: false
@@ -21,4 +21,24 @@ angular.module('car4goingApp')
       };
 
       $scope.locateme();
+
+      $scope.searchResults = [];
+
+      $scope.search = function() {
+          var q = $scope.searchQuery;
+          $http({method: "JSONP", url: 'http://nominatim.openstreetmap.org/search/'+q+'?format=json&json_callback=JSON_CALLBACK'})
+              .success(function(data, status, headers, config) {
+                  $scope.searchResults = data;
+              })
+          ;
+      };
+
+      $scope.mapGo = function(place) {
+          $scope.center = { lat: parseFloat(place.lat),
+                            lng: parseFloat(place.lon),
+                            zoom: 15
+          };
+          $('#searchModal').modal('hide');
+          console.log($scope.center);
+      };
   });

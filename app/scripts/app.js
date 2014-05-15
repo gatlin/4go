@@ -15,10 +15,6 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/reservations', {
-        templateUrl: 'views/reservations.html',
-        controller: 'ReservationsCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
