@@ -1,0 +1,66 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#main-nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">car4going</a>
+      </div>
+  </div>
+  <div class="collapse navbar-collapse" id="#main-nav">
+      <ul class="nav navbar-nav">
+          <li><a href="#/reservations">Reservations</a></li>
+      </ul>
+          <button class="btn btn-default navbar-btn"
+              ng-click="locateme()"
+              >Locate me</button>
+          <button class="btn btn-default navbar-btn" data-toggle="modal"
+              data-target="#searchModal">
+              Search
+              </button>
+      <ul class="nav navbar-nav navbar-right">
+          <li ng-show="loggedin"><a href="#">Logout</a></li>
+          <li ng-hide="loggedin"><a href="#">Login</a></li>
+      </ul>
+  </div>
+</nav>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <leaflet height="770px" center="center"></leaflet>
+    </div>
+</div>
+
+<div class="modal fade"
+     id="searchModal"
+     aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-inline" role="form">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Search</h4>
+                </div>
+                <div class="modal-body">
+                        <div class="form-group">
+                            <label class="sr-only" for="query">Enter search
+                                query</label>
+                            <input type="email" class="form-control col-md-12"
+                            id="query"
+                            placeholder="Where are you?">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                        data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
