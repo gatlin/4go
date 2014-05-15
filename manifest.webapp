@@ -11,5 +11,10 @@
   },
   "default_locale": "en",
   "fullscreen":"true",
-  "launch_path":"/4go"
+  "launch_path":"/4go",
+  "permissions": {
+      "geolocation":{
+          "description":"This IS a map app"
+      }
+  }
 }
