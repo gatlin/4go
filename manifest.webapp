@@ -7,8 +7,9 @@
   },
   "developer": {
     "name": "Gatlin Johnson",
-    "url": "http://niltag.net/4go"
+    "url": "http://niltag.net/"
   },
   "default_locale": "en",
-  "fullscreen":"true"
+  "fullscreen":"true",
+  "launch_path":"/4go"
 }
