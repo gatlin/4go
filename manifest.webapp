@@ -1,0 +1,20 @@
+{
+  "name": "4go",
+  "description": "A simple OSM map application for mobile devices",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Gatlin Johnson",
+    "url": "http://niltag.net/"
+  },
+  "default_locale": "en",
+  "fullscreen":"true",
+  "launch_path":"/4go",
+  "permissions": {
+      "geolocation":{
+          "description":"This IS a map app"
+      }
+  }
+}
