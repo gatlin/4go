@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('car4goingApp')
-  .controller('MainCtrl', function ($scope, geolocation, $http) {
+  .controller('MainCtrl', function ($scope, geolocation, $http, $window) {
       angular.extend($scope, {
           defaults: {
               scrollWheelZoom: false
@@ -41,4 +41,9 @@ angular.module('car4goingApp')
           $('#searchModal').modal('hide');
           console.log($scope.center);
       };
+
   });
+
+  function install() {
+      var request = window.navigator.mozApps.install("http://niltag.net/4go/manifest.webapp");
+  };

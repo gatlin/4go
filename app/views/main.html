@@ -14,24 +14,27 @@
   <div class="collapse navbar-collapse" id="main-nav">
       <ul class="nav navbar-nav">
           <li>
-          <button class="btn btn-default navbar-btn"
+          <a
               ng-click="locateme()"
-              >Locate me</button>
+              >Locate me</a>
           </li>
-          <li><span class="spacer"></span></li>
           <li>
-          <button class="btn btn-default navbar-btn" data-toggle="modal"
+          <a  data-toggle="modal"
               data-target="#searchModal">
               Search
-              </button>
+              </a>
               </li>
+          <li>
+          <a href="javascript:install()">Install</a>
+          </li>
           </ul>
   </div>
 </nav>
 
 <div class="row">
     <div class="col-sm-12 col-md-12">
-        <leaflet height="770px" center="center"></leaflet>
+        <leaflet
+            resizable ng-style="{width: windowWidth, height: windowHeight-50 }" center="center"></leaflet>
     </div>
 </div>
 
@@ -52,8 +55,7 @@
                             query</label>
                         <input type="search" class="form-control col-md-12"
                         id="query"
-                        ng-model="searchQuery"
-                        placeholder="Where are you?">
+                        ng-model="searchQuery">
                     </div>
                     <button type="submit" class="btn
                         btn-primary">Search</button>
@@ -70,3 +72,4 @@
         </div>
     </div>
 </div>
+
